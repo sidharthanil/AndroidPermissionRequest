@@ -8,6 +8,8 @@ In your activity class check for permission using any of the static functions pr
 
 Say i want to check location access
 
+```
+
 if(PermissionCheck.islocationAccessAvailable(Activity.this){
   // if true do what you have to do
 } else {
@@ -15,10 +17,11 @@ if(PermissionCheck.islocationAccessAvailable(Activity.this){
   PermissionCheck.requestLocationPermission(Activity.this);
 }
 
+```
 
+In your activity class, inside your onRequestPermissionsResult() do this to properly receive yout permission
 
-// in your activity class inside your onRequestPermissionsResult() do this to properly receive yout permission
-
+```
 
   @Override
       public void onRequestPermissionsResult(int requestCode,
@@ -41,6 +44,7 @@ if(PermissionCheck.islocationAccessAvailable(Activity.this){
     }
     
     
+```
     
     
     
